@@ -61,7 +61,7 @@ public class IntArrayWorker
       }
     }
   }
-  
+
   /**
    * print the values in the array in rows and columns
    */
@@ -77,8 +77,7 @@ public class IntArrayWorker
     }
     System.out.println();
   }
-  
-  
+
   /** 
    * fill the array with a pattern
    */
@@ -98,5 +97,21 @@ public class IntArrayWorker
       }
     }
   }
- 
+
+    public int getCount(int k) {
+        int count = 0;
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[row].length; col++) {
+                if (matrix[row][col] == k) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    public int getLargest() {
+
+    }
+
 }
