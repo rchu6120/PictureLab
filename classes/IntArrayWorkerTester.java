@@ -60,11 +60,12 @@ public class IntArrayWorkerTester
     worker.setMatrix(nums2);
     int largest = worker.getLargest();
     System.out.println("Largest should be 6 and is " + largest);
-//    // test when largest is first/    int[][] nums3 = {{6, 2, 3}, {4, 5, 1}};
+    // test when largest is first
+    int[][] nums3 = {{6, 2, 3}, {4, 5, 1}};
     worker.setMatrix(nums3);
     largest = worker.getLargest();
     System.out.println("Largest should be 6 and is " + largest);
-//    // test when largest is in the middle
+    // test when largest is in the middle
     int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
     worker.setMatrix(nums4);
     largest = worker.getLargest();
@@ -77,18 +78,18 @@ public class IntArrayWorkerTester
   }
   
   /** Method to test getColTotal */
-//  public static void testGetColTotal()
-//  {
-//    IntArrayWorker worker = new IntArrayWorker();
-//    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
-//    worker.setMatrix(nums2);
-//    int total = worker.getColTotal(0);
-//    System.out.println("Total for column 0 should be 5 and is " + total);
-//    total = worker.getColTotal(1);
-//    System.out.println("Total for column 1 should be 7 and is " + total);
-//    total = worker.getColTotal(2);
-//    System.out.println("Total for column 2 should be 9 and is " + total);
-//  }
+  public static void testGetColTotal()
+  {
+    IntArrayWorker worker = new IntArrayWorker();
+   int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+   worker.setMatrix(nums2);
+    int total = worker.getColTotal(0);
+   System.out.println("Total for column 0 should be 5 and is " + total);
+   total = worker.getColTotal(1);
+   System.out.println("Total for column 1 should be 7 and is " + total);
+    total = worker.getColTotal(2);
+   System.out.println("Total for column 2 should be 9 and is " + total);
+ }
   
   public static void main(String[] args)
   {
@@ -98,6 +99,6 @@ public class IntArrayWorkerTester
     testGetTotal();
     testGetTotalNested();
     testGetLargest();
-    //testGetColTotal();
+    testGetColTotal();
   }
 }
