@@ -54,6 +54,13 @@ public class PictureTester
     water.explore();
   }
 
+  public static void testMirrorVerticalRightToLeft() {
+    Picture jenny = new Picture("jenny-red.jpg");
+    jenny.explore();
+    jenny.mirrorVerticalRightToLeft();
+    jenny.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -94,6 +101,7 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    testMirrorVerticalRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
@@ -108,6 +116,6 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    testFixUnderwater();
+    //testFixUnderwater();
   }
 }
