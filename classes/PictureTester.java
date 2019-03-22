@@ -61,6 +61,27 @@ public class PictureTester
     jenny.explore();
   }
 
+  public static void testmirrorHorizontal() {
+    Picture motorcycle = new Picture("redMotorcycle.jpg");
+    motorcycle.explore();
+    motorcycle.mirrorHorizontal();
+    motorcycle.explore();
+  }
+
+  public static void testmirrorHorizontalBotToTop() {
+    Picture robot = new Picture("robot.jpg");
+    robot.explore();
+    robot.mirrorHorizontalBotToTop();
+    robot.explore();
+  }
+
+  public static void testmirrorDiagonal() {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -101,7 +122,10 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorVerticalRightToLeft();
+    //testMirrorVerticalRightToLeft();
+    //testmirrorHorizontal();
+    //testmirrorHorizontalBotToTop();
+    testmirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
