@@ -252,11 +252,13 @@ public class Picture extends SimplePicture
       {
         
         leftPixel = pixels[row][col];      
-        rightPixel = pixels[row]                       
-                         [mirrorPoint - col + mirrorPoint];
+        rightPixel = pixels[row]
+                [mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
+        count++;
       }
     }
+    System.out.println(count);
   }
 
   public void mirrorVerticalRightToLeft() {
@@ -322,6 +324,10 @@ public class Picture extends SimplePicture
         bottomLeftPixel.setColor(topRightPixel.getColor());
       }
     }
+  }
+
+  public void mirrorArms() {
+
   }
 
   /** copy from the passed fromPic to the
