@@ -104,6 +104,13 @@ public class PictureTester
     gull.mirrorGull();
     gull.explore();
   }
+
+  public static void testCopy2() {
+    Picture koala = new Picture("koala.jpg");
+    koala.explore();
+    koala.copy2(koala, 10, 400, 10, 400);
+    koala.explore();
+  }
   
   /** Method to test the collage method */
   public static void testCollage()
@@ -142,10 +149,11 @@ public class PictureTester
     //testmirrorDiagonal();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
+    testCopy2();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
