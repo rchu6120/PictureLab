@@ -643,7 +643,7 @@ public class Picture extends SimplePicture
    *
    * Need to update this method to match the one below ********
    *
-   * @param pixels
+   * @param
    * @param angle the angle to divide, given in radians (0 to pi)
    */
   public ArrayList<Pixel> getPartialArrayLine(Pixel[][] fullArray, double angle, int typeOf)
@@ -692,7 +692,7 @@ public class Picture extends SimplePicture
    *
    * Need to update this method to match the one below ********
    *
-   * @param pixels
+   * @param
    * @param angle the angle to divide, given in radians (0 to pi)
    */
   public ArrayList<Pixel> getPartialArray(Pixel[][] fullArray, double angle, int typeOf)
@@ -769,7 +769,51 @@ public class Picture extends SimplePicture
 
     return tempList;
   }
-  
+
+  public int getCountRedOverValue(int value) {
+    Pixel[][] pixels = this.getPixels2D();
+    int count = 0;
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        if (pixels[row][col].getRed() > value) {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
+
+  public void setRedtoHalfValueInTopHalf() {
+    Pixel[][] pixels = this.getPixels2D();
+    for (int row = 0; row < pixels.length/2; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        pixels[row][col].setRed(pixels[row][col].getRed()/2);
+      }
+    }
+  }
+
+  public void clearBlueOverValue(int value) {
+    Pixel[][] pixels = this.getPixels2D();
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        if (pixels[row][col].getBlue() > value) {
+          pixels[row][col].setBlue(0);
+        }
+      }
+    }
+  }
+
+  public int[] getAverageForColumn(int col) {
+    Pixel[][] pixels = this.getPixels2D();
+    int[] arr = new int[pixels[col].length];
+    int total = 0;
+    for (int row = 0; row < pixels.length; row++) {
+      total = pixels[row][col].getRed() + pixels[row][col].getGreen() + pixels[row][col].getBlue();
+      arr[row] = total/3;
+    }
+    return arr;
+  }
+
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
